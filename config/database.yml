@@ -21,8 +21,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: sqlite3
+  adapter: mysql
   encoding: utf8
   database: blog_production
   username: root
-  password: asdfasdf
+  password: password
