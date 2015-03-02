@@ -1,6 +1,3 @@
-# config valid only for Capistrano 3.1
-lock '3.1.0'
-
 set :application, 'blog'
 set :repo_url, 'https://github.com/thagomizer/examples-rails-blog.git'
 
@@ -59,4 +56,3 @@ namespace :deploy do
   after :publishing, 'deploy:restart'
   after :finishing, 'deploy:cleanup'
 end
-

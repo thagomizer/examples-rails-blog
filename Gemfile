@@ -48,7 +48,6 @@ group "development" do
   gem 'capistrano', '~> 3.2'
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1.1'
-  gem 'capistrano-bundler'
   # Add this if you're using rbenv
   gem 'capistrano-rbenv', '~> 2.0'
 end
