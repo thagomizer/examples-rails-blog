@@ -5,6 +5,7 @@ set :application, 'blog'
 set :repo_url, 'https://github.com/thagomizer/examples-rails-blog.git'
 
 set :deploy_to, '/home/deploy/blog'
+set :bundle_cmd, '/home/deploy/.rbenv/shims/bundle'
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
