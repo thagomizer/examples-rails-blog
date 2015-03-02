@@ -44,12 +44,14 @@ group :development do
 end
 
 # Use Capistrano for deployment
-gem 'capistrano', '~> 3.1.0'
-gem 'capistrano-bundler', '~> 1.1.2'
-gem 'capistrano-rails', '~> 1.1.1'
-
-# Add this if you're using rbenv
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
+group "development" do
+  gem 'capistrano', '~> 3.2'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-bundler'
+  # Add this if you're using rbenv
+  gem 'capistrano-rbenv', '~> 2.0'
+end
 
 
 # Use debugger
