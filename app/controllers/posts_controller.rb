@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     if params[:search] then
       search_param = "%#{params[:search]}%"
-      @posts = Post.where("title like :title OR body like :body", search_param, search_param)
+      @posts = Post.where("title like ? OR body like ?", search_param, search_param)
     else
       @posts = Post.all.order('created_at DESC')
     end
