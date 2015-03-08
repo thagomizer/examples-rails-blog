@@ -4,7 +4,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all.order('created_at DESC')
+    if params[:search] then
+      search_param = "%#{params[:search]}%"
+      @posts = Post.where("title like :title OR body like :body", search_param, search_param)
+    else
+      @posts = Post.all.order('created_at DESC')
+    end
   end
 
   # GET /posts/1
